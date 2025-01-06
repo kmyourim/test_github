@@ -1,16 +1,16 @@
 name: GitActions Demo1
 on: push
-jobs:
-  GitActions-demo-job:
-  name: Demo Job
-  runs-on: ubuntu-lastest
-  steps:
-   - name: Print a environment
-     env:
-      MY_VAR: Hi there! My Name is
-      FIRST_NAME: yurim
-      LAST_NAME: keum
-      AWS_JOB_NAME: yurim.keum
-  run:|
-    echo  %MY_VAR &FIRST_NAME &LAST_NAME:
-    sceho: 
+jobs: 
+  GitActions-demo-job: 
+    name: Demo Job
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Print a enviromnet
+        env: 
+          MY_VAR: Hi there. My name is
+          FIRST_NAME: yurim  
+          LAST_NAME: keum
+          AWS_JOB_NAME: yurim.keum
+        run: |
+          echo $MY_VAR $FIRST_NAME $LAST_NAME.
+          echo $MY_VAR $AWS_JOB_NAME.
